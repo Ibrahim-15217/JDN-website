@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Loader from "../components/Loader";
+import Footer from "./Footer";
 import {
   Calendar,
   Clock,
@@ -199,6 +200,7 @@ const EventDetails = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
