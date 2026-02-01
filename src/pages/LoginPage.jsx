@@ -4,6 +4,7 @@ import { Mail } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext'; 
 import ThemeToggleSwitch from '../components/ThemeToggleSwitch'; 
 import logo from '../assets/logo.svg';
+import { NavLink } from 'react-router-dom';
 
 
 const LoginPage = ({ onContinue }) => {
@@ -16,35 +17,30 @@ const LoginPage = ({ onContinue }) => {
         onContinue(credential); // This moves the user to the OTP step
     }
 };
-    
-    // // Define dot and background colors based on theme
-    // const dotColor = isDarkMode ? '#374151' : '#E5E7EB'; 
-    // const bodyBgColor = isDarkMode ? '#111827' : '#F9FAFB'; 
 
     return (
         <div className="min-h-screen flex flex-col relative overflow-hidden font-sans text-gray-900">
           
-          {/* Dotted Background Pattern */}
-          <div
-            className="
-                absolute inset-0 -z-10
-                bg-[#F9FAFB] dark:bg-[#feffff]
-            "
-            style={{
-                backgroundImage: `
-                radial-gradient(#E5E7EB 2px, transparent 2px),
-                radial-gradient(#8e9199 2px, transparent 2px)
-                `,
-                backgroundSize: "30px 30px",
-                backgroundPosition: "0 0, 0 0"
-            }}
-            />
+          {/* Dotted Background Pattern with animation */}
+                <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                className="absolute inset-0 -z-10 bg-[#F9FAFB] dark:bg-gray-900 
+                            bg-[radial-gradient(#E5E7EB_2px,transparent_2px)] 
+                            dark:bg-[radial-gradient(#374151_2px,transparent_2px)]
+                            bg-size-[30px_30px]"
+                />
     
           {/* Navigation */}
-          <nav className="w-full max-w-7xl mx-auto px-6 py-4 flex items-center justify-between border-b border-gray-200">
-            <div className="flex items-center gap-2 text-2xl font-bold text-emerald-500">
-                <img src={logo} alt="Logo" />
-            </div>
+          <nav className="w-full max-w-7xl mx-auto px-6 py-4 flex items-center justify-between border-b border-gray-200 dark:border-gray-600">
+            
+            {/* Logo */}
+            
+                      <NavLink to="/" className="flex items-center gap-2 shrink-0">
+                        <img src={logo} alt="JDN Logo" className="h-10 w-auto" />
+                      </NavLink>
+
           </nav>
 
         
@@ -99,7 +95,7 @@ const LoginPage = ({ onContinue }) => {
 
                     {/* Signup Link */}
                     <div className="mt-8 text-gray-600 dark:text-gray-400 text-sm transition-colors duration-300">
-                        No account yet? <a href="#" className="text-emerald-500 dark:text-emerald-400 font-semibold hover:underline">Join the Network</a>
+                        No account yet? <a href="/signup" className="text-emerald-500 dark:text-emerald-400 font-semibold hover:underline">Join the Network</a>
                     </div>
                     
                 </motion.div>

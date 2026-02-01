@@ -10,6 +10,7 @@ import ContactPage from "./pages/ContactPage";
 import CommunityPage from "./pages/CommunityPage";
 import ProgramsPage from "./pages/ProgramsPage";
 import ProgramDetailsPage from "./pages/ProgramDetailsPage";
+import OTPVerification from "./pages/OTPVerification";
 function App() {
   return (
     <Routes>
@@ -23,6 +24,7 @@ function App() {
       <Route path="/community" element={<CommunityPage />} />
       <Route path="/programs" element={<ProgramsPage />} />
       <Route path="/programs/:id" element={<ProgramDetailsPage />} />
+      <Route path="/verify-otp" element={<OTPVerification />} />
     </Routes>
   );
 }

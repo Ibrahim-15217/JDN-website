@@ -11,14 +11,15 @@ import EventPage from "../pages/EventPage";
 import LoginPage from "../pages/LoginPage";
 import Signup from "../pages/Signup";
 import OTPVerification from "../pages/OTPVerification";
+import AboutPage from "../pages/AboutPage";
 
 const AppRoutes = () => {
   return (
     <Routes>
       {/* Main site layout */}
-      {/* <Route element={<MainLayout />}>
+      <Route element={<MainLayout />}>
         
-      </Route> */}
+      </Route>
 
       {/* Auth layout */}
       <Route element={<AuthLayout />}>
@@ -26,6 +27,11 @@ const AppRoutes = () => {
         <Route path="/" element={
             <PageWrapper>
                 <HomePage />
+            </PageWrapper>} />
+
+        <Route path="/about" element={
+            <PageWrapper>
+                <AboutPage />
             </PageWrapper>} />
 
         <Route path="/login" element={

@@ -235,13 +235,13 @@ const LearningHub = () => {
       tag: 'Course',
       title: 'Applied Data Science',
       desc: 'Build practical data skills using real-world datasets relevant to governance, agriculture, and local industries.',
-      img: 'https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=800',
+      img: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070',
     },
     {
       tag: 'Workshop',
       title: 'Product & UI/UX Design',
       desc: 'Design digital products that solve real problems for African users, public platforms, and startups.',
-      img: 'https://images.unsplash.com/photo-1586717791821-3f44a563de4c?auto=format&fit=crop&q=80&w=800',
+      img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070',
     },
     {
       tag: 'Stories',
