@@ -461,9 +461,10 @@ const EventsPage = () => {
         </div>
       </section>
 
-      {/* ================= FEATURED EVENT (Matches Home Page Split Layout) ================= */}
+      {/* ================= FEATURED EVENT ================= */}
        {/* Featured Event */}
       {featuredEvent && (
+        <Link to={`/events/${featuredEvent.slug}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <motion.div
             initial={{ opacity: 0 }}
@@ -521,6 +522,7 @@ const EventsPage = () => {
             </div>
           </motion.div>
         </div>
+        </Link>
       )}
 
       {/* ================= EVENTS GRID (Matches Home Page Bento Style) ================= */}
@@ -571,7 +573,7 @@ const EventsPage = () => {
                 </AnimatePresence>
               </motion.div>
               
-              {/* Host Event CTA - Matching Home Page CTA */}
+              {/* Host Event CTA */}
               <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
